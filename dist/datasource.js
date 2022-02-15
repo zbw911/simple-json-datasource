@@ -51,7 +51,7 @@ var GenericDatasource = exports.GenericDatasource = function () {
       }
 
       return this.doRequest({
-        url: this.url + '/query',
+        url: this.url + '?cmd=query',
         data: query,
         method: 'POST'
       });
@@ -85,7 +85,7 @@ var GenericDatasource = exports.GenericDatasource = function () {
       };
 
       return this.doRequest({
-        url: this.url + '/annotations',
+        url: this.url + '?cmd=annotations',
         method: 'POST',
         data: annotationQuery
       }).then(function (result) {
@@ -100,7 +100,7 @@ var GenericDatasource = exports.GenericDatasource = function () {
       };
 
       return this.doRequest({
-        url: this.url + '/search',
+        url: this.url + '?cmd=search',
         data: interpolated,
         method: 'POST'
       }).then(this.mapToTextValue);
@@ -155,7 +155,7 @@ var GenericDatasource = exports.GenericDatasource = function () {
 
       return new Promise(function (resolve, reject) {
         _this2.doRequest({
-          url: _this2.url + '/tag-keys',
+          url: _this2.url + '?cmd=tag-keys',
           method: 'POST',
           data: options
         }).then(function (result) {
@@ -170,7 +170,7 @@ var GenericDatasource = exports.GenericDatasource = function () {
 
       return new Promise(function (resolve, reject) {
         _this3.doRequest({
-          url: _this3.url + '/tag-values',
+          url: _this3.url + '?cmd=tag-values',
           method: 'POST',
           data: options
         }).then(function (result) {

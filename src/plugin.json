@@ -1,19 +1,19 @@
 {
-  "name": "SimpleJson",
-  "id": "grafana-simple-json-datasource",
+  "name": "simplejson1url",
+  "id": "grafana-simple-json-datasource-1-url",
   "type": "datasource",
 
   "partials": {
-    "config": "public/app/plugins/datasource/simplejson/partials/config.html"
+    "config": "public/app/plugins/datasource/simplejson1url/partials/config.html"
   },
 
   "metrics": true,
   "annotations": true,
 
   "info": {
-    "description": "simple json datasource",
+    "description": "simple json datasource in one url",
     "author": {
-      "name": "Grafana Labs",
+      "name": "Grafana Labs,张保维",
       "url": "https://grafana.com"
     },
     "logos": {
@@ -21,7 +21,7 @@
       "large": "img/simpleJson_logo.svg"
     },
     "links": [
-      {"name": "GitHub", "url": "https://github.com/grafana/simple-json-datasource"},
+      {"name": "GitHub", "url": "https://github.com/zbw911/simple-json-datasource"},
       {"name": "MIT License", "url": "https://github.com/grafana/simple-json-datasource/blob/master/LICENSE"}
     ],
     "version": "1.4.1",

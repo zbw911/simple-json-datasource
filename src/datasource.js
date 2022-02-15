@@ -31,7 +31,7 @@ export class GenericDatasource {
     }
 
     return this.doRequest({
-      url: this.url + '/query',
+      url: this.url + '?cmd=query',
       data: query,
       method: 'POST'
     });
@@ -63,7 +63,7 @@ export class GenericDatasource {
     };
 
     return this.doRequest({
-      url: this.url + '/annotations',
+      url: this.url + '?cmd=annotations',
       method: 'POST',
       data: annotationQuery
     }).then(result => {
@@ -77,7 +77,7 @@ export class GenericDatasource {
     };
 
     return this.doRequest({
-      url: this.url + '/search',
+      url: this.url + '?cmd=search',
       data: interpolated,
       method: 'POST',
     }).then(this.mapToTextValue);
@@ -124,7 +124,7 @@ export class GenericDatasource {
   getTagKeys(options) {
     return new Promise((resolve, reject) => {
       this.doRequest({
-        url: this.url + '/tag-keys',
+        url: this.url + '?cmd=tag-keys',
         method: 'POST',
         data: options
       }).then(result => {
@@ -136,7 +136,7 @@ export class GenericDatasource {
   getTagValues(options) {
     return new Promise((resolve, reject) => {
       this.doRequest({
-        url: this.url + '/tag-values',
+        url: this.url + '?cmd=tag-values',
         method: 'POST',
         data: options
       }).then(result => {
